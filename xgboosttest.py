@@ -37,7 +37,7 @@ if __name__ == '__main__':
         X_train, X_test = X[train_index], X[test_index]
         y_train, y_test = y[train_index], y[test_index]
 
-        gbm = xgb.XGBClassifier(n_estimators=300, max_depth=10, learning_rate=0.05).fit(X_train, y_train)
+        gbm = xgb.XGBClassifier().fit(X_train, y_train)
         ypred = gbm.predict(X_test)
         #rfc.fit(X_train,y_train)
         #ypred=rfc.predict(X_test)
